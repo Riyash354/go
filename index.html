@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoX Analytics - Professional Interview Dashboard</title>
+    <meta name="description" content="Professional dark-themed analytics dashboard for interview analysis and candidate evaluation">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">GoX Analytics</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                
+                <a href="interview-analysis.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                    </svg>
+                    <span>Interview Analysis</span>
+                </a>
+                
+                <a href="biometric-verification.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                        <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                        <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
+                        <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/>
+                    </svg>
+                    <span>Biometric</span>
+                </a>
+                
+                <a href="hr-insights.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span>HR Insights</span>
+                </a>
+                
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <div class="header-info">
+                        <h1 class="header-title">Hemaja-interview</h1>
+                        <div class="header-meta">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            <span>12 May 2024</span>
+                            <span>•</span>
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <span>7:10 PM</span>
+                            <span>•</span>
+                            <span>20 min</span>
+                            <span class="badge">Interview</span>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-outline">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download
+                        </button>
+                        <button class="btn btn-primary">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                <polyline points="16,6 12,2 8,6"/>
+                                <line x1="12" y1="2" x2="12" y2="15"/>
+                            </svg>
+                            Share
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="content">
+                <!-- Video Section -->
+                <div class="video-section">
+                    <div class="video-container">
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3 class="chart-title">Interview Recording</h3>
+                                <p class="chart-subtitle">Zal • Hemaja</p>
+                            </div>
+                            <div class="video-player">
+                                <div class="video-placeholder">
+                                    <div class="play-button">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <polygon points="5,3 19,12 5,21 5,3"/>
+                                        </svg>
+                                    </div>
+                                    <div class="video-info">
+                                        <h3>Interview Session</h3>
+                                        <p>Click to play recording</p>
+                                    </div>
+                                </div>
+                                <div class="video-controls">
+                                    <div class="controls-left">
+                                        <button class="control-btn">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <polygon points="5,3 19,12 5,21 5,3"/>
+                                            </svg>
+                                        </button>
+                                        <button class="control-btn">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                                            </svg>
+                                        </button>
+                                        <span class="time">7:42 / 20:00</span>
+                                    </div>
+                                    <div class="controls-right">
+                                        <button class="control-btn">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                                <circle cx="12" cy="12" r="3"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-stats">
+                        <div class="metric-card primary glow">
+                            <div class="metric-header">
+                                <div class="metric-info">
+                                    <h4 class="metric-title">Overall Score</h4>
+                                </div>
+                                <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                                </svg>
+                            </div>
+                            <div class="metric-value">70</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <div class="metric-info">
+                                    <h4 class="metric-title">Participants</h4>
+                                    <p class="metric-subtitle">Zal • Hemaja</p>
+                                </div>
+                                <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="metric-value">2</div>
+                        </div>
+                        
+                        <div class="metric-card success">
+                            <div class="metric-header">
+                                <div class="metric-info">
+                                    <h4 class="metric-title">Duration</h4>
+                                    <p class="metric-subtitle">Active session</p>
+                                </div>
+                                <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                            </div>
+                            <div class="metric-value">20 min</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Grid -->
+                <div class="analytics-grid">
+                    <div class="metric-card success">
+                        <div class="metric-header">
+                            <div class="metric-info">
+                                <h4 class="metric-title">Lip Sync</h4>
+                            </div>
+                            <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                        </div>
+                        <div class="metric-value">100</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill success" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-info">
+                                <h4 class="metric-title">Truthfulness</h4>
+                                <p class="metric-subtitle">Above average</p>
+                            </div>
+                        </div>
+                        <div class="metric-value">65</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card primary">
+                        <div class="metric-header">
+                            <div class="metric-info">
+                                <h4 class="metric-title">Engagement</h4>
+                            </div>
+                        </div>
+                        <div class="metric-value">70</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill primary" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card warning">   
+                        <div class="metric-header">
+                            <div class="metric-info">
+                                <h4 class="metric-title">Bias</h4>
+                                <p class="metric-subtitle">Low bias detected</p>
+                            </div>
+                        </div>
+                        <div class="metric-value">15</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill warning" style="width: 15%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Metrics -->
+                <div class="analytics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-info">
+                                <h4 class="metric-title">Influence</h4>
+                            </div>
+                        </div>
+                        <div class="metric-value">65</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card success">
+                        <div class="metric-header">
+                            <div class="metric-info">
+                                <h4 class="metric-title">Sentiment</h4>
+                            </div>
+                        </div>
+                        <div class="metric-value">75</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill success" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-info">
+                                <h4 class="metric-title">Speaking Rate</h4>
+                                <p class="metric-subtitle">159 WPM</p>
+                            </div>
+                        </div>
+                        <div class="metric-value">Normal</div>
+                    </div>
+                    
+                    <div class="metric-card primary">
+                        <div class="metric-header">
+                            <div class="metric-info">
+                                <h4 class="metric-title">Confidence</h4>
+                            </div>
+                        </div>
+                        <div class="metric-value">82</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill primary" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker Analysis -->
+                <div class="speaker-analysis">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Speaker Analysis</h3>
+                        </div>
+                        <div class="speaker-stats">
+                            <div class="speaker-item">
+                                <div class="speaker-info">
+                                    <div class="speaker-color speaker-1"></div>
+                                    <span class="speaker-name">Zal</span>
+                                </div>
+                                <span class="speaker-percentage">42.70%</span>
+                            </div>
+                            <div class="speaker-item">
+                                <div class="speaker-info">
+                                    <div class="speaker-color speaker-2"></div>
+                                    <span class="speaker-name">Hemaja</span>
+                                </div>
+                                <span class="speaker-percentage">57.30%</span>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-bar">
+                                <div class="timeline-segment speaker-1" style="left: 0%; width: 10%"></div>
+                                <div class="timeline-segment speaker-2" style="left: 10%; width: 10%"></div>
+                                <div class="timeline-segment speaker-1" style="left: 20%; width: 8.33%"></div>
+                                <div class="timeline-segment speaker-2" style="left: 28.33%; width: 11.67%"></div>
+                                <div class="timeline-segment speaker-1" style="left: 40%; width: 11.67%"></div>
+                                <div class="timeline-segment speaker-2" style="left: 51.67%; width: 8.33%"></div>
+                                <div class="timeline-segment speaker-1" style="left: 60%; width: 13.33%"></div>
+                                <div class="timeline-segment speaker-2" style="left: 73.33%; width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Analysis Tabs</h3>
+                            <div class="chart-badges">
+                                <span class="chart-badge outline">Notes</span>
+                                <span class="chart-badge outline">Clips</span>
+                                <span class="chart-badge outline">Action Items</span>
+                                <span class="chart-badge active">Key Questions</span>
+                            </div>
+                        </div>
+                        <div class="analysis-content">
+                            <div class="filter-words">
+                                <span class="filter-word">like</span>
+                                <span class="filter-word">uh</span>
+                                <span class="filter-word">yeah</span>
+                            </div>
+                            <p class="analysis-text">
+                                Filter words and key insights from the conversation will appear here.
+                                Key questions and action items are automatically detected and highlighted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
