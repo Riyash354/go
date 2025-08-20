@@ -131,42 +131,47 @@
                                 </div>
                             </div>
                             <div class="video-player">
-                                <div class="video-placeholder">
-                                    <div class="play-button">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                            <polygon points="5,3 19,12 5,21 5,3"/>
-                                        </svg>
-                                    </div>
-                                    <div class="video-info">
-                                        <h3>Interview Session</h3>
-                                        <p>Click to play recording</p>
-                                    </div>
-                                </div>
-                                <div class="video-controls">
-                                    <div class="controls-left">
-                                        <button class="control-btn">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                                <polygon points="5,3 19,12 5,21 5,3"/>
-                                            </svg>
-                                        </button>
-                                        <button class="control-btn">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-                                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
-                                            </svg>
-                                        </button>
-                                        <span class="time">7:42 / 20:00</span>
-                                    </div>
-                                    <div class="controls-right">
-                                        <button class="control-btn">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                                <circle cx="12" cy="12" r="3"/>
-                                            </svg>
-                                        </button>
+                                <div class="video-placeholder" style="position: relative; display: inline-block;">
+                                    <img src="dummy-meeting.png" alt="Live Interview Recording" class="dummy-video" />
+                            
+                                    <!-- LIVE Badge -->
+                                    <div style="
+                                        position: absolute;
+                                        top: 10px;
+                                        left: 10px;
+                                        background: red;
+                                        color: white;
+                                        font-weight: bold;
+                                        font-size: 14px;
+                                        padding: 4px 8px;
+                                        border-radius: 4px;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 6px;
+                                    ">
+                                        <span style="
+                                            display: inline-block;
+                                            width: 8px;
+                                            height: 8px;
+                                            background: white;
+                                            border-radius: 50%;
+                                            animation: blink 1s infinite;
+                                        "></span>
+                                        LIVE
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!-- Blinking animation -->
+                            <style>
+                            @keyframes blink {
+                                0% { opacity: 1; }
+                                50% { opacity: 0; }
+                                100% { opacity: 1; }
+                            }
+                            </style>
+                            
+                            
                         </div>
                     </div>
                     
